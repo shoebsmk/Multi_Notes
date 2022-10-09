@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="#E9D7FF"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/noteTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Finish Assignment"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Oct 8, 2022 04:50:12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteTitleTV" />
+
+    <TextView
+        android:id="@+id/noteTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="This is sample note text: As a person who wants to use social media as a way to advertise or promote a business or yourself, you should be aware of the tools you have online to make your social media campaigns go smoothly."
+        app:layout_constraintStart_toStartOf="@+id/noteTitleTV"
+        app:layout_constraintTop_toBottomOf="@+id/timeTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>
