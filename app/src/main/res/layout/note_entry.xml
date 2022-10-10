@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:background="#E9D7FF"
+    android:background="#B1F1E9"
     android:padding="8dp">
 
     <TextView
@@ -31,7 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="This is sample note text: As a person who wants to use social media as a way to advertise or promote a business or yourself, you should be aware of the tools you have online to make your social media campaigns go smoothly."
+        android:hint="This is sample note text: As a person who wants to use social media as a way to ..."
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/noteTitleTV"
         app:layout_constraintTop_toBottomOf="@+id/timeTV" />
 </androidx.constraintlayout.widget.ConstraintLayout>

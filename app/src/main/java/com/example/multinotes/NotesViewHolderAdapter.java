@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class NotesViewHolderAdapter extends RecyclerView.Adapter<NoteViewHolder> {
 
@@ -37,11 +36,10 @@ public class NotesViewHolderAdapter extends RecyclerView.Adapter<NoteViewHolder>
     public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: ");
         Note note = noteArrayList.get(position);
-
         holder.noteTitle.setText(note.getNoteTitle());
-        holder.note.setText(note.getNote());
-        holder.time.setText(String.valueOf(note.getTime()));
-        holder.time.setText(new Date().toString());
+        holder.note.setText(note.getNoteText());
+        holder.time.setText(String.valueOf(note.getLastSaveTime()));
+        //holder.time.setText(new Date().toString());
     }
 
 

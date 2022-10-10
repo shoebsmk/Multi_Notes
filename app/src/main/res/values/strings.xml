@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Multi Notes</string>
+    <string name="info">info</string>
+    <string name="add">add</string>
 </resources>

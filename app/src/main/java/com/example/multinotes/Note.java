@@ -18,33 +18,36 @@ public class Note {
         return noteTitle;
     }
 
-    public String getNote() {
-        return note;
+    public String getNoteText() {
+        if(noteText.length() >= 80){
+            return noteText.substring(0,80) + "...";
+        }
+        else return noteText;
     }
 
-    public Date getTime() {
-        return time;
+    public Date getLastSaveTime() {
+        return lastSaveTime;
     }
 
     public final String noteTitle;
-    public final String note;
-    public Date time;
+    public final String noteText;
+    public Date lastSaveTime;
     private static int ctr;
 
-    public Note(String noteTitle, String note, Date time) {
+    public Note(String noteTitle, String noteText, Date lastSaveTime) {
         this.noteTitle = noteTitle;
-        this.note = note;
-        //this.time = time;
+        this.noteText = noteText;
+        this.lastSaveTime = lastSaveTime;
     }
 
 
     Note(){
         noteTitle = "Note " + ctr;
-        note = "This is sample note text: As a person who wants to use social media " +
+        noteText = "This is sample note text: As a person who wants to use social media " +
                 "as a way to advertise or promote a business or yourself," +
                 " you should be aware of the tools you have online to make" +
                 " your social media campaigns go smoothly.";
-        time  = Calendar.getInstance().getTime();
+        lastSaveTime = Calendar.getInstance().getTime();
         ctr++;
     }
 
@@ -53,7 +56,7 @@ public class Note {
     public String toString() {
         return "Note{" +
                 ", noteTitle='" + noteTitle + '\'' +
-                ", note=" + note +
+                ", note=" + noteText +
                 //", time=" + time +
                 '}';
     }
@@ -61,8 +64,8 @@ public class Note {
     public JSONObject toJSON() throws JSONException {
         JSONObject noteJSON = new JSONObject();
         noteJSON.put("noteTitle",noteTitle);
-        noteJSON.put("note",note);
-        noteJSON.put("time",time.toString());
+        noteJSON.put("note", noteText);
+        noteJSON.put("time", lastSaveTime.toString());
         return noteJSON;
     }
 
